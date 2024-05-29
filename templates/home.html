@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    <section class="feature">
+            <div class="feature-content">
+                <h1>Todo</h1>
+                <p> Todo helps you more focus ,either work or play . </p>
+                <a href="{% url 'register' %}" class="btn btn-primary cta"> Get Started</a>
+            </div>
+            <img src="{% static 'images/feature.jpg' %}" alt="" class="feature-image">
+    </section>
+      
+    {% endblock content %}
+    
+</body>
+</html>

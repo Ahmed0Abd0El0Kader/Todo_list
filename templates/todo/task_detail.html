@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    <article class="task">
+        <header>
+            <h2>{{ task.title }}</h2>
+            <span class="badge {% if task.completed %}badge-completed{% else %}badge-pending{%endif%}">
+                {% if task.completed %} Completed {%else%} Pending {%endif%}
+            </span>
+        </header>
+        <p>{{task.description}}</p>
+    </article>
+
+      
+    {% endblock content %}
+    
+</body>
+</html>
